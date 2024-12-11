@@ -6,9 +6,9 @@ November 2024 cohort
 
 
 #### Changelog
-2024-11-26: Initial description from req act 24.4 used as template <br/>
-2024-12-04: Update for progress on chosen data set <br/>
-2024-12-11: Update for analysis at submission date <br/>
+2024-11-26: Initial description from req act 24.4 used as template
+2024-12-04: Update for progress on chosen data set
+2024-12-11: Update for analysis at submission date
 
 
 # PROJECT DESCRIPTION
@@ -28,7 +28,7 @@ Key alignments include:
 Through this project, I have deepened my knowledge of machine learning and optimisation while contributing to long-term infrastructure that supports ongoing research around trading activities.
 
 # DATA
-The dataset consists of preprocessed data for a single security for a period of 120 trading hours from 2024-10-05 to 2024-10-10. Data is timestamped to local time. A recording rollover occurs at ~3am each day leading to ~10 minutes of missing data per day.
+The dataset consists of preprocessed data for a single security for a period of 4 24 hour trading days running over 2024-10-05 to 2024-10-10. Data is timestamped to local time. A recording rollover occurs at ~4am each day leading to ~10 minutes of missing data per day.
 
 The dataset contains the order book states of the SOLUSD, SOLUSDT and SOLF0:USTF0 markets all sampled together every 15+(raondom uniform 0..1) seconds. For each entry, we observe the order book imbalance at the top ten depth levels for each security, and the backward and forward returns for these instruments at various trailing window and forward forecast horizons.
 
