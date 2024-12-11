@@ -6,9 +6,9 @@ November 2024 cohort
 
 
 #### Changelog
-2024-11-26: Initial description from req act 24.4 used as template
-2024-12-04: Update for progress on chosen data set
-2024-12-11: Update for analysis at submission date
+2024-11-26: Initial description from req act 24.4 used as template <br/>
+2024-12-04: Update for progress on chosen data set <br/>
+2024-12-11: Update for analysis at submission date <br/>
 
 
 # PROJECT DESCRIPTION
