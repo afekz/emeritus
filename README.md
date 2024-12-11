@@ -36,7 +36,7 @@ In addition, revealed supply and demand as observed in the order books of differ
 
 When evaluating model performance, we considered the following: regression metrics, most specifically r-squared, are useful for evaluating models, but in practical use, one 'cannot eat r-squared'. We need to be able to monetise returns to pay our bills. Accordingly, we evaluated the various models using other, alternative rules in addition to r-squared metrics. A simplest trading rule is to model owning a security when the signal (model prediction) is positive, and model selling short a security when the signal (model prediction) is negative. This gives us a signal-signed return metric: what do we earn if we use the signal to buy or sell such that we're always either 1 unit long, or 1 unit short? This treats the output as a classification: a slightly more advanced evaluation of a models anticipated trading performance would be the signal-weight realised market returns. Here we assume that the stronger our upward(/download) model price forecast, the more securities we will buy(/sell). Also of interest is the risk-normalsed average return of this model: how much do we earn on average per unit of risk (measured as the standard deviation of earned returns)?
 
-All these together.
+All these together were relevant in evaluating and selecting a particular model for use.
 
 # DATA
 The dataset consists of preprocessed data for a single security for a period of 4 24 hour trading days running over 2024-10-05 04:01:15.962069 to 2024-10-10 03:51:56.716628 (data is timestamped to local time, Zurich). A recording rollover occurs at ~4am each day leading to ~10 minutes of missing data per day.
