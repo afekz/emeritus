@@ -36,6 +36,7 @@ This dataset is intentionally narrow, and generalisation to other instruments wi
  - in production use, the model will be regularly refit on a rolling basis; and
  - from a research perspective, any insights gained can be explored against other securities to determine the degree of generalisation.
 
+The Analysis.ipynb file does an automated download of the dataset to the local machine. The dataset can be downloaded directly using the link https://drive.google.com/file/d/1NWjfxIDQ1K1shKIWCfmFLhj7AlT8dWg_/view?usp=drive_link
 
 # RESULTS
 We compared the performance of:
