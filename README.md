@@ -27,8 +27,19 @@ Key alignments include:
 
 Through this project, I have deepened my knowledge of machine learning and optimisation while contributing to long-term infrastructure that supports ongoing research around trading activities.
 
+# NON-TECHNICAL DESCRIPTION
+The model attempts to capture the intuition a single security, Solana in the project's instance, should in general trade for approximately the same price across different markets, whether purchased in dollars, dollar stablecoins, or financed on a rolling basis. 
+
+These kind of price formation effects occur on a relatively short timescale: the returns included in the model range from 1 millisecond out to 5 seconds prior. The prediction horizon extends out only 15 seconds into the future.
+
+In addition, revealed supply and demand as observed in the order books of different markets in Solana should represent supply and demand able to affect the future price path of Solana as a security broadly, regardless of in which market that supply or demand is revealed. The model seeks to capture the anticipated price impact of revealed supply and demand on the future price Solana.
+
+When evaluating model performance, we considered the following: regression metrics, most specifically r-squared, are useful for evaluating models, but in practical use, one 'cannot eat r-squared'. We need to be able to monetise returns to pay our bills. Accordingly, we evaluated the various models using other, alternative rules in addition to r-squared metrics. A simplest trading rule is to model owning a security when the signal (model prediction) is positive, and model selling short a security when the signal (model prediction) is negative. This gives us a signal-signed return metric: what do we earn if we use the signal to buy or sell such that we're always either 1 unit long, or 1 unit short? This treats the output as a classification: a slightly more advanced evaluation of a models anticipated trading performance would be the signal-weight realised market returns. Here we assume that the stronger our upward(/download) model price forecast, the more securities we will buy(/sell). Also of interest is the risk-normalsed average return of this model: how much do we earn on average per unit of risk (measured as the standard deviation of earned returns)?
+
+All these together.
+
 # DATA
-The dataset consists of preprocessed data for a single security for a period of 4 24 hour trading days running over 2024-10-05 to 2024-10-10. Data is timestamped to local time. A recording rollover occurs at ~4am each day leading to ~10 minutes of missing data per day.
+The dataset consists of preprocessed data for a single security for a period of 4 24 hour trading days running over 2024-10-05 04:01:15.962069 to 2024-10-10 03:51:56.716628 (data is timestamped to local time, Zurich). A recording rollover occurs at ~4am each day leading to ~10 minutes of missing data per day.
 
 The dataset contains the order book states of the SOLUSD, SOLUSDT and SOLF0:USTF0 markets all sampled together every 15+(raondom uniform 0..1) seconds. For each entry, we observe the order book imbalance at the top ten depth levels for each security, and the backward and forward returns for these instruments at various trailing window and forward forecast horizons.
 
